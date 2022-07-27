@@ -56,6 +56,7 @@ class inputs(object):
       self.rc = min(self.boxlength)/2.
     if parser.parse_args().N != 'read':
       self.nmol = int(parser.parse_args().N)
+      self.max_nmol = self.nmol # needed for muVT
     if parser.parse_args().temperature != 'read':
       self.T = float(parser.parse_args().temperature)
     if parser.parse_args().mu != 'read':

@@ -1,5 +1,6 @@
 import numpy as np
 import random as rand
+import sys
 import matplotlib.pyplot as plt
 
 class movie(object):
@@ -57,8 +58,8 @@ class initialize(object):
 
     """
     if nmol > self.maxn:
-        print('Max number of molecules is: %d' % self.max_nmol)
-        sys.exit(main())
+        print('ERROR: Max number of molecules is: %d' % self.maxn)
+        sys.exit()
 
     pos = np.zeros((self.maxn,box.ndim))
     posexist = np.zeros((self.maxn))
