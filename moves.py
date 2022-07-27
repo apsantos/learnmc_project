@@ -24,6 +24,11 @@ class moves(object):
         number of attempted moves of each type
     self.naccept : 1d array 
         number of accepted moves of each type
+    self.nmovetypes : int
+        number of move types. Currently they correspond to
+        0 : displacement
+        1 : insertion
+        2 : deletion
 
     """
     self.nmol = n
