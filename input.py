@@ -57,6 +57,8 @@ class inputs(object):
     if parser.parse_args().N != 'read':
       self.nmol = int(parser.parse_args().N)
       self.max_nmol = self.nmol # needed for muVT
+      self.frac_displacement = 1.0
+      self.frac_insdel = 0.0
     if parser.parse_args().temperature != 'read':
       self.T = float(parser.parse_args().temperature)
     if parser.parse_args().mu != 'read':
@@ -64,6 +66,8 @@ class inputs(object):
       self.max_nmol = 10000
       self.NVT = False
       self.muVT = True
+      self.frac_insdel = 0.4
+      self.frac_displacement = 0.6
     else:
       self.muVT = True
       self.NVT = False
